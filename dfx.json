@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "allpedia_backend": {
+      "main": "src/allpedia_backend/main.mo",
+      "type": "motoko"
+    },
+    "allpedia_frontend": {
+      "dependencies": [
+        "allpedia_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/allpedia_frontend/src/index.html"
+      },
+      "source": [
+        "src/allpedia_frontend/assets",
+        "dist/allpedia_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
